@@ -50,6 +50,6 @@ int main(int argc, char *argv[])
     //释放frame对象空间，buf的引用减一
     av_frame_free(&frame2);
 	cout << "av_frame_free(&frame1);" << endl;
-	cout << "frame1 ref cout=" << av_buffer_get_ref_count(frame2->buf[0]) << endl;
+	//cout << "frame1 ref cout=" << av_buffer_get_ref_count(frame2->buf[0]) << endl;
     return 0;
 }
