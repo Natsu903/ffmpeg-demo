@@ -40,7 +40,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="xvideo_view.cpp">
+    <ClCompile Include="xvideoview.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="xsdl.cpp">
@@ -48,7 +48,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="xvideo_view.h">
+    <ClInclude Include="xvideoview.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="xsdl.h">
