@@ -29,6 +29,11 @@ public:
 	 * \return 是否渲染成功
 	 */
 	bool Draw(const unsigned char* data, int linesize = 0) override;
+
+	void Close() override;
+
+	bool IsExit() override;
+
 private:
 	SDL_Window* win_ = nullptr;
 	SDL_Renderer* render_ = nullptr;

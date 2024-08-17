@@ -16,6 +16,8 @@ static bool InitVideo()
         std::cout << SDL_GetError() << std::endl;
         return false;
     }
+    //设定缩放算法,线性插值
+    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
     return true;
 }
 
@@ -49,6 +51,7 @@ bool XSDL::Init(int w, int h, Format fmt, void* win_id)
     }
 
     //创建渲染器
+    if (render_) SDL_DestroyRenderer(render_);
     render_ = SDL_CreateRenderer(win_, -1, SDL_RENDERER_ACCELERATED);
 	if (!render_)
 	{
@@ -70,6 +73,7 @@ bool XSDL::Init(int w, int h, Format fmt, void* win_id)
     default:
         break;
     }
+    if (texture_) SDL_DestroyTexture(texture_);
     texture_ = SDL_CreateTexture(render_, sdl_fmt, SDL_TEXTUREACCESS_STREAMING, w, h);
 	if (!texture_)
 	{
@@ -115,14 +119,19 @@ bool XSDL::Draw(const unsigned char* data, int linesize)
     //清空屏幕
     SDL_RenderClear(render_);
     //材质复制到渲染器
-    if (scale_w_ <= 0)scale_w_ = width_;
-    if (scale_h_ <= 0)scale_h_ = height_;
     SDL_Rect rect;
-    rect.x = 0;
-    rect.y = 0;
-    rect.w = scale_w_;
-    rect.h = scale_h_;
-    re = SDL_RenderCopy(render_, texture_, NULL, &rect);
+    SDL_Rect* prect = nullptr;
+    if (scale_w_ > 0)//用户手动设置缩放
+    {
+		rect.x = 0;
+		rect.y = 0;
+		rect.w = scale_w_;
+		rect.h = scale_h_;
+        prect = &rect;
+    }
+    
+    
+    re = SDL_RenderCopy(render_, texture_, NULL, prect);
 	if (re != 0)
 	{
 		std::cout << SDL_GetError() << std::endl;
@@ -131,4 +140,33 @@ bool XSDL::Draw(const unsigned char* data, int linesize)
     SDL_RenderPresent(render_);
 
     return true;
+}
+
+void XSDL::Close()
+{
+    std::unique_lock<std::mutex> sdl_lock(mtx_);
+    if (texture_)
+    {
+        SDL_DestroyTexture(texture_);
+        texture_ = nullptr;
+    }
+    if (render_)
+    {
+        SDL_DestroyRenderer(render_);
+        render_ = nullptr;
+    }
+    if (win_)
+    {
+        SDL_DestroyWindow(win_);
+        win_ = nullptr;
+    }
+}
+
+bool XSDL::IsExit()
+{
+    SDL_Event ev;
+    SDL_WaitEventTimeout(&ev,1);
+    if (ev.type == SDL_QUIT)
+        return true;
+    return false;
 }

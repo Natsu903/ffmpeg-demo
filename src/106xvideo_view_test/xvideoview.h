@@ -21,7 +21,7 @@ public:
 
 
 	/**
-	 * 初始化渲染窗口.
+	 * 初始化渲染窗口 线程安全，可多次调用.
 	 * 
 	 * \param w 窗口宽度
 	 * \param h 窗口高度
@@ -40,6 +40,12 @@ public:
 	 * \return 是否渲染成功
 	 */
 	virtual bool Draw(const unsigned char* data, int linesize = 0) = 0;
+
+	//清理所有申请的资源
+	virtual void Close() = 0;
+
+	//处理窗口退出事件
+	virtual bool IsExit() = 0;
 
 	//显示缩放
 	void Scale(int w, int h)

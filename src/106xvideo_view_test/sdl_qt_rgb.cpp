@@ -15,6 +15,11 @@ static XVideoView* view=nullptr;
 void sdl_qt_rgb::timerEvent(QTimerEvent* ev)
 {
 	yuv_file.read((char*)yuv, sdl_w * sdl_h * 1.5);
+	if (view->IsExit())
+	{
+		view->Close();
+		exit(0);
+	}
 	view->Draw(yuv);
 }
 
@@ -22,6 +27,7 @@ void sdl_qt_rgb::resizeEvent(QResizeEvent* ev)
 {
 	ui.label->resize(size());
 	ui.label->move(0, 0);
+	//view->Scale(width(), height());
 }
 
 
@@ -40,7 +46,9 @@ sdl_qt_rgb::sdl_qt_rgb(QWidget *parent)
 	sdl_h = 300;
 	ui.label->resize(sdl_w, sdl_h);
 	view = XVideoView::Create();
-	view->Init(sdl_w, sdl_h, XVideoView::YUV420P,(void*)ui.label->winId());
+	view->Init(sdl_w, sdl_h, XVideoView::YUV420P);
+	view->Close();
+	view->Init(sdl_w, sdl_h, XVideoView::YUV420P, (void*)ui.label->winId());
 
 	yuv = new unsigned char[sdl_w * sdl_h * pix_size];
     startTimer(10);
