@@ -1,0 +1,10 @@
+﻿  xsdl.cpp
+  xvideoview.cpp
+  sdl_qt_rgb.cpp
+  main.cpp
+E:\cppcode\ffmpeg-demo\src\110xvideo_view_avframe_fps\xvideoview.cpp(59,20): warning C4018: “<”: 有符号/无符号不匹配
+E:\cppcode\ffmpeg-demo\src\110xvideo_view_avframe_fps\xvideoview.cpp(62,41): warning C4018: “>=”: 有符号/无符号不匹配
+E:\cppcode\ffmpeg-demo\src\110xvideo_view_avframe_fps\sdl_qt_rgb.cpp(35,17): warning C4834: 放弃具有 [[nodiscard]] 属性的函数的返回值
+  qrc_sdl_qt_rgb.cpp
+  moc_sdl_qt_rgb.cpp
+  103sdl_qt_rgb.vcxproj -> E:\cppcode\ffmpeg-demo\src\110xvideo_view_avframe_fps\x64\Debug\110xvideo_view_avframe_fps.exe
