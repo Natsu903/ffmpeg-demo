@@ -1,0 +1,2 @@
+ffmpeg -i demo.mp4 -s 800x400 -pix_fmt rgba i.rgb
+ffmpeg -i demo.mp4 -s 600x300 2.yuv
