@@ -62,7 +62,11 @@ bool XSDL::Init(int w, int h, Format fmt)
     unsigned int sdl_fmt = SDL_PIXELFORMAT_ARGB8888;
     switch (fmt)
     {
+    case XVideoView::BGRA:
+        sdl_fmt = SDL_PIXELFORMAT_RGBA32;
+        break;
     case XVideoView::RGBA:
+        sdl_fmt = SDL_PIXELFORMAT_BGRA32;
         break;
     case XVideoView::ARGB:
         sdl_fmt = SDL_PIXELFORMAT_ARGB32;

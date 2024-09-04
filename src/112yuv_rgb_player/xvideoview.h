@@ -7,15 +7,17 @@ struct AVFrame;
 
 void MSleep(unsigned int ms);
 
+long long NowMs();
+
 class XVideoView
 {
 public:
-	enum Format
+	enum Format//枚举的值与ffmpeg一致
 	{
-		RGBA = 0,
-		ARGB,
-		YUV420P,
-		BGRA
+		YUV420P = 0,
+		ARGB = 25,
+		RGBA = 26,
+		BGRA = 28
 	};
 
 	enum RenderType
@@ -63,7 +65,15 @@ public:
 
 	int render_fps(){return render_fps_;}
 
+	//打开文件
 	bool Open(std::string filepath);
+
+	/**
+	 * .
+	 * 读取一帧数据，并维护AVFrame空间
+	 * 每次调用会覆盖上一次数据
+	 */
+	AVFrame* Read();
 
 	void set_win_id(void* win) { win_id_ = win; }
 
@@ -83,6 +93,7 @@ protected:
 
 private:
 	std::ifstream ifs_;
+	AVFrame* frame_ = nullptr;
 };
 
 

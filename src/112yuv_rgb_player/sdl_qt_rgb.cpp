@@ -27,7 +27,36 @@ void sdl_qt_rgb::resizeEvent(QResizeEvent* ev)
 
 void sdl_qt_rgb::View()
 {
+	//存放上次渲染的时间戳
+	static int last_pts[32] = { 0 };
+	static int fps_arr[32] = { 0 };
+	fps_arr[0] = ui.set_fps1->value();
+	fps_arr[1] = ui.set_fps2->value();
 
+	for (int i = 0; i < views.size(); i++)
+	{
+		if (fps_arr[i] <= 0)continue;
+		//需要间隔时间
+		int ms = 1000 / fps_arr[i];
+		//判断是否到了可渲染时间
+		if (NowMs() - last_pts[i] < ms)continue;
+		last_pts[i] = NowMs();
+
+		auto frame = views[i]->Read();
+		if(!frame) continue;
+		views[i]->DrawFrame(frame);
+		//显示fps
+		stringstream ss;
+		ss << "fps:" << views[i]->render_fps();
+		if (i == 0)
+		{
+			ui.fps1->setText(ss.str().c_str());
+		}
+		else
+		{
+			ui.fps2->setText(ss.str().c_str());
+		}
+	}
 }
 
 void sdl_qt_rgb::Main()
@@ -35,7 +64,7 @@ void sdl_qt_rgb::Main()
 	while (!is_exit_)
 	{
 		ViewS();
-		MSleep(1);
+		MSleep(10);
 	}
 }
 
@@ -56,7 +85,7 @@ void sdl_qt_rgb::Open(int i)
 	if (filename.isEmpty())return;
 	cout << filename.toLocal8Bit().data() << endl;
 	//打开文件
-	if (views[i]->Open(filename.toStdString()))
+	if (!views[i]->Open(filename.toStdString()))
 	{
 		return;
 	}
@@ -94,7 +123,6 @@ void sdl_qt_rgb::Open(int i)
 	views[i]->Init(w, h, fmt);
 }
 
-
 sdl_qt_rgb::sdl_qt_rgb(QWidget *parent)
     : QWidget(parent)
 {
@@ -105,7 +133,7 @@ sdl_qt_rgb::sdl_qt_rgb(QWidget *parent)
 	views.push_back(XVideoView::Create());
 	views.push_back(XVideoView::Create());
 	views[0]->set_win_id((void*)ui.video1->winId());
-	views[0]->set_win_id((void*)ui.video2->winId());
+	views[1]->set_win_id((void*)ui.video2->winId());
 
 
     //startTimer(10);
