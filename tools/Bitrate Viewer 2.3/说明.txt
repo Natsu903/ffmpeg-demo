@@ -1,0 +1,11 @@
+Bitrate Viewer 2.3 汉化版 说明
+http://www.winhoros.de/docs/bitrate-viewer/
+http://www.winhoros.de/docs/bitrate-viewer/download.html
+
+这是一款查看视频码率等信息的免费工具。
+
+简体中文界面 - 双击“BitrateViewer 汉化版.exe”程序。
+英文原版界面 - 双击“BitrateViewer.exe”程序。
+
+
+

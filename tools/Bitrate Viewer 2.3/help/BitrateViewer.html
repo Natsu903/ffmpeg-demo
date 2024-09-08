@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-2">
+	<meta http-equiv="Content-Language" content="en">
+	<meta name="robots" content="index,follow">
+	<meta name="revisit-after" content="7 days">
+	<meta name="Content-Language" content="en">
+	<meta name="Language" content="English, en, english">
+	<meta name="description" content="Helpfile of Bitrate Viewer, a next generation graphical histogram tool for Microsoft Windows for MPEG-1/MPEG-2 analysis">
+	<meta name="abstract" content="MPEG-1/MPEG-2 Bitrate Viewer histogram helpfile">
+	<meta name="keywords" content="Bitrate Viewer, video, movie, analysis, quality, MPEG-2, MPEG-1, histogram, free software, Microsoft Windows">
+	<meta name="page-topic" content="Help">
+	<meta name="page-type" content="Information">
+	<meta name="audience" content="all">
+	<meta name="author" content="K. Udo Gerber">
+	<meta name="publisher" content="K. Udo Gerber">
+	<meta name="copyright" content="(C) 2008,2009 EDV &amp; Astro Service">
+	<title>Bitrate Viewer - Help File</title>
+	<link rel="stylesheet" type="text/css" href="styles/BitrateViewer.css">
+</head>
+
+<body>
+	<h1><a name="top"></a>Bitrate Viewer - Documentation</h1>
+
+	<table align="left">
+		<tbody>
+		<tr class="linkpanel">
+			<td>
+				<div style="padding-left:82px;">
+				<a class="menubody" href="BitrateViewer.html">Home</a> |
+				<a class="menubody" href="features.html">Features</a> |
+				<a class="menubody" href="zoom_view.html">Zoom mode</a> |
+				<a class="menubody" href="properties.html">Properties</a> |
+				<a class="menubody" href="commands.html">Commands</a> |
+				<a class="menubody" href="problems.html">Problems</a> |
+				<a class="menubody" href="thanks.html">Thanks</a> |
+				<a class="menubody" href="http://community.wellness-portal24.biz/phpBB2/viewforum.php?f=18" target="_blank">Forum</a>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table><br>
+
+	<div class="clear">
+		<h2>Overview</h2>
+	</div>
+
+	<div id="wrap-image-right">
+		<img src="images/BitrateViewer-4.08GB-MPEG2.png" width="573" height="302">
+	</div>
+
+	<p>This tool is functionally derived and rewritten from DVD-Lab PRO's
+		integrated Bitrate Viewer with some additional enhancements and
+		specials.
+	</p>
+
+	<p>The main concept of this tool is to analyze all MPEG material from
+		which you can create DVD's directly with a DVD authoring tool and
+		draw a graphical histogram from analysis. So it should be able to
+		read all files that include a video track and that you can
+		use as assets for an authoring tool. With the graphical output you
+		can easily view the quality of your video files before you're
+		outputting it to a DVD and so save a lot of money by avoiding the
+		production of any bad stuff. That's the main reason Bitrate
+		Viewer is written for.	</p>
+
+	<p>Because the main interface to read and analyze MPEG frames is based
+		on the (L)GPL FFMpeg library the tool can also read, analyze and
+		display many other video codecs than MPEG1 and MPEG2. But don't
+		complain if you supply a file other than the main types MPEG1 and
+		MPEG2 in the case of not working or even crashing. This may happen from
+		time to time.</p>
+
+	<p>A second interface for reading MPEG's is integrated and used in Bitrate
+		Viewer whose reason for existence is the pre-estimation of the frame
+		count for an MPEG file just opened without reading it completely. This
+		interface only treats MPEG1 and MPEG2 file types. When you open such a
+		file, this interface estimates the frame count prior to the analysis so
+		the tool can do a proper preview while reading and analyzing the rest
+		of it - in most cases.</p>
+
+	<p>You may find especially Panasonic's VRO demuxed files or other MPEG
+		files with bad timestamps within. These markers will cause a bad frame
+		count estimation. In those cases the preview will be bad scaled until
+		the file is completely read.</p>
+
+	<p>There are many different MPEG encoders out there and also many
+		possibilities to interpret ISO/IEC MPEG specifications. Therefore it
+		is a high level task to calculate or estimate the frame count of an
+		MPEG file prior reading it completely. Basically the frame count
+		estimation algorithm is optimized to finish its job within a second or
+		less. On MPEG1/MPEG2 ES and PES files this can be accomplished normally
+		within some hundred milliseconds (if you have the file of interest on a
+		standard hard drive that can read at appropriate speed). If you open
+		VOB files it may take longer than a second - but up to now it didn't
+		ever exceed two seconds.</p>
+
+	<p>Meanwhile there are implemented a lot of commands to control the tool's
+		GUI - so for a complete quick overwiew please read the
+		<a href="commands.html">commands section</a>.</p>
+
+	<hr width="250" size="1" noshade align="left" color="#808080">
+
+	<table align="left">
+		<tbody>
+		<tr class="linkpanel">
+			<td>
+				<div align="left">
+				<a class="menubody" href="#top">top</a>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</body>
+</html>

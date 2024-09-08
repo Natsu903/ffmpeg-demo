@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-2">
+	<meta http-equiv="Content-Language" content="en">
+	<meta name="robots" content="index,follow">
+	<meta name="revisit-after" content="7 days">
+	<meta name="Content-Language" content="en">
+	<meta name="Language" content="English, en, english">
+	<meta name="description" content="Multi-zoom feature of Bitrate Viewer, a next generation graphical histogram tool for Microsoft Windows for MPEG-1/MPEG-2 analysis">
+	<meta name="abstract" content="multi-zoom feature of MPEG-1/MPEG-2 Bitrate Viewer histogram drawer">
+	<meta name="keywords" content="Bitrate Viewer, zoom, video, movie, analysis, features, quality, MPEG-2, MPEG-1, histogram, free software, Microsoft Windows">
+	<meta name="page-topic" content="Users Guide">
+	<meta name="page-type" content="Documentation">
+	<meta name="audience" content="all">
+	<meta name="author" content="K. Udo Gerber">
+	<meta name="publisher" content="K. Udo Gerber">
+	<meta name="copyright" content="(C) 2009 EDV &amp; Astro Service">
+	<title>Bitrate Viewer - Features</title>
+	<link rel="stylesheet" type="text/css" href="styles/BitrateViewer.css">
+</head>
+
+<body>
+	<h1><a name="top"></a>Bitrate Viewer - Documentation</h1>
+
+	<table align="left">
+		<tbody>
+		<tr class="linkpanel">
+			<td>
+				<div style="padding-left:82px;">
+				<a class="menubody" href="BitrateViewer.html">Home</a> |
+				<a class="menubody" href="features.html">Features</a> |
+				<a class="menubody" href="zoom_view.html">Zoom mode</a> |
+				<a class="menubody" href="properties.html">Properties</a> |
+				<a class="menubody" href="commands.html">Commands</a> |
+				<a class="menubody" href="problems.html">Problems</a> |
+				<a class="menubody" href="thanks.html">Thanks</a> |
+				<a class="menubody" href="http://community.wellness-portal24.biz/phpBB2/viewforum.php?f=18" target="_blank">Forum</a>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table><br>
+
+	<div class="clear">
+		<h2>Multi-zoom mode</h2>
+	</div>
+
+	<div id="wrap-image-right">
+		<img src="images/BitrateViewer-EnterZoom.png" width="573" height="302">
+	</div>
+
+	<p>This feature has been added since Bitrate Viewer Version 2.0 - zoom a
+		marked area within the viewer window several times downto a single
+		sample depth view. To start a zoom just <i>LeftClick</i> and drag an
+		area of your needs (see right-hand screenshot). Small tick marks as you
+		can see on the screenshot are not displayed in the standard non-zoomed view
+		except you move the mouse pointer within a small band at the top of the
+		view. The tick marks are placed at every 5% of the views width of which
+		every 25% is somewhat bigger than the others. Thus may allow you a more
+		precise placement of your zoom. Notice if this is your first zoom you want
+		to apply on a view you will see a zoom indicator bar below the bottom of
+		the viewer window. A red blinking bull-eye will show you the percentage of
+		the view currently covered.</p>
+
+	<p>To adjust your selection of the zoomable area hold <i>Shift-RightMouseButton</i>
+		down and drag the area to your size as you want it. Hold <i>Ctrl-RightMouseButton</i>
+		down within the marked zoomable area you move the area along the viewer
+		window. Note that the percentage value displayed centered to the zoomable
+		area is based on the width of the viewer window in pixels.</p>
+
+	<p>Now when you're done with you selection of a zoomable area use a
+		<i>RightClick</i> into this area just marked and displayed and the
+		tool will enter the zoom. Several things will happen now: The most
+		important thing of course is, that the view is zoomed to your selection
+		and now shows the amount of bitrate samples that lie between start and
+		end of your selection.</p>
+
+	<div class="clear">
+		<p><u><strong>Note</strong></u>: If you want to exit your current selection,
+		<i>LeftClick</i> once anywhere into the viewer window to cancel the
+		selection.</p>
+	</div>
+
+	<div id="wrap-image-left">
+		<img src="images/BitrateViewer-Zoomed1.png" width="573" height="302">
+	</div>
+
+	<p>The zoom indicator below the viewer window shows an orange colored
+		fixed bull-eye which indicated the width in percent of the amount
+		of bitrate samples currently displayed vs. its total amount.</p>
+
+	<p>An additional zoom flag is displayed right-hand beneath the total
+		time value on the right hand side of the GUI. It indicates that the
+		view is shown with an active zoom and optional the depth number of
+		zooming is appended. You can switch between standard and extended
+		display of the zoom flag with <i>RightClick</i>.</p>
+
+	<p>In the headline of the viewer window you'll see a status on its right
+		side containing the amount of bitrate samples currently displayed
+		vs. its total amount, the duration in hh:mm:ss:mil of the zoom
+		covered and the percentage of the bitrate samples (current vs.
+		total). The latter may differ and is mostly less than the percentage
+		displayed when you've selected the zoomable are before. The pixel
+		values of the viewer window needn't match accurately to the amount
+		of bitrate samples. Some specialities occur for the frame analysis
+		method: The headline will show the frame number your mouse tracked
+		cursor is currently pointing to and the term samples here is identical
+		to frames. Note that the frame number starts with the value 1.<br>
+		For the other analysis methods the current sample number is displayed
+		in the headline. Sample numbers also start with the value 1.</p>
+
+	<div class="clear">
+		<h2>Advanced zoom features</h2>
+	</div>
+
+	<p>Note that when your zoomed area does not cover the <strong>minimum</strong>
+		and/or <strong>maximum bitrate values</strong> with their markers, an
+		arrow of the same color as the missing non-displayed marker is displayed
+		indicating the direction to the true position of the missing item.</p>
+
+	<div id="wrap-image-right">
+		<img src="images/BitrateViewer-PreJumpZoom.png" width="573" height="302">
+	</div>
+
+	<p>If the missing minimum and maximum bitrate values both lie on the same
+		direction out of the view the longer arrow indicates that its position
+		is farther outward than the other one. As you can see on the screenshot
+		beneath these arrows are working like hyperlinks. Once you <i>LeftClick</i>
+		on either one the zoomed view will be moved around the minimum or maximum
+		bitrate position you've selected and if possible the selected item will
+		be centered within the viewer window. The scale of the moved zoom view
+		will remain the same across minimum and maximum bitrate jumps. By the way
+		the zoom depth value of the zoom flag (right hand to the total time value
+		display) won't change because the scale of the view is the same after
+		re-positioning.</p>
+
+	<p>Beneath zooming around the minimum or maximum bitrate marker you have two
+		more possibilities to move to another position and zoom with the same
+		scale as the current zoom is displayed (so the depth value of the zoom
+		flag also doesn't change):</p>
+
+	<div class="clear">
+		<img src="images/1.gif" width="1" height="1">
+	</div>
+
+	<div id="wrap-image-left">
+		<img src="images/BitrateViewer-MinJumpedZoom.png" width="573" height="302">
+	</div>
+
+	<ul class="diamond" style="margin-top:0px; margin-left:599px;">
+		<li class="block"><b>Jump to direct neighbour</b>:<br>
+			Use the zoom indicator below the viewer window and <i>LeftClick</i>
+			beneath the orange bull-eye either left or right to it. The zoom is
+			moved directly to its left or right border, including the border
+			sample value as the previous or next starting point.</li>
+		<li class="block"><strong>Global drag and move zoom area</strong>:<br>
+			Again use the zoom indicator here and <i>Ctrl-LeftClick</i>
+			anywhere on the indicator and drag/move the bull-eye to the target
+			position of the complete file you want it to. The new zoomed view
+			is centered around the middle of the bull-eye's position related
+			to the full view of the whole file.</li>
+	</ul>
+
+	<div class="clear">
+		<h2>Changing the zoom scale</h2>
+	</div>
+
+	<p>The remaining zoom manipulations will all change the scale of the
+		resulting zoom display and so the amount of bitrates on the viewer
+		window will be different to the previous zoomed display. So here we have:</p>
+
+	<ul class="diamond">
+		<li class="block"><b>Zoom to one sample per display unit at place</b>:<br>
+			This one can only be applied to the standard non-zoomed display.
+			With <i>Ctrl-Alt-Shift-RightClick</i> within the viewer window a
+			scale will be calculated that results in one measure sample per
+			display unit, i.e. per pixel of the display width. The current
+			cursor position on init of the zoom will be centered on the
+			resulting displayed zoom. If this zoom feature was successfully
+			applied you'll get specific detail information on each single
+			sample displayed on screen while moving the cursor over the viewer
+			window.</li>
+		<li class="block"><strong>Zoom in +50% at place (expand view)</strong>:<br>
+			The zoom-in feature is applicable on an existing zoomed display
+			unless the zoom scale is not already too deep. Use a
+			<i>Ctrl-Shift-RightClick</i> within the viewer window to get the
+			display zoomed in at half of its current amount of samples. The
+			current cursor position will be centered on the resulting
+			displayed zoom.</li>
+		<li class="block"><strong>Zoom out -200% at place (shrink view)</strong>:<br>
+			The zoom-out feature is applicable on an existing zoomed display.
+			use a <i>Ctrl-Alt-RightClick</i> within the viewer window to get
+			the display zoomed out at double of its current amount of samples.
+			The current cursor position will be centered on the resulting
+			displayed zoom. If the resulting scale can't be doubled the zoom
+			mode will be exited and you'll get the standard non-zoomed
+			display in this case.</li>
+		<li class="block"><strong>Continous zoom-in at place</strong>:<br>
+			With <i>Ctrl-Shift-LeftClick</i> within the viewer window you
+			start a new or continue an existing automatic zoom which will
+			be automatically continued as long as you keep the mouse button
+			and the key modifiers pressed. The first zoom step that is done
+			here will catch the current mouse pointer position and try to
+			center the bitrate sample value pointed on. The repetition time
+			interval is constant and the scale factor for the zoom increases
+			by a natural exponentional function. This zoom feature stops when
+			the maximum scaling depth is on screen. You can start this zoom
+			feature even from a non-zoomed (standard) displayed view.<br>
+			As of version 2.1 you can also use the mouse wheel for this feature
+			which might be more convenient for you. Like with a camera pull the
+			wheel down to yourself to initiate a zoom or expand an existing zoom
+			and therefore zoom into the display.</li>
+		<li class="block"><strong>Continous zoom-out at place</strong>:<br>
+			With <i>Ctrl-Alt-LeftClick</i> within the viewer window you'll
+			begin to zoom out from any zoomed displayed view that will be
+			continued automatically. During the first zoom step the bitrate
+			sample value the mouse cursor is pointing on will be centered
+			on screen as long you keep the mouse button pressed and the key
+			modifiers held down while at the same time zooming in will
+			continue until you release the mouse button. The repetition time
+			interval here is also constant with a decreasing zoom scale
+			factor based on a natural exponential funtion. You will notice
+			a short pause when the last possible zoom scaling value is
+			acquired after which the view will be switched back to the
+			non-zoomed standard view mode. Thus you can't apply this zoom
+			feature to the non-zoomed standard display.<br>
+			As of version 2.1 you can do it with the mouse wheel. Like with
+			a camera push the wheel up and away from yourself to shrink an
+			existing zoom or to exit from a zoom and therefore zoom out of
+			the display.</li>
+	</ul>
+
+	<hr width="250" size="1" noshade align="left" color="#808080">
+
+	<table align="left">
+		<tbody>
+		<tr class="linkpanel">
+			<td>
+				<div align="left">
+				<a class="menubody" href="#top">top</a>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</body>
+</html>

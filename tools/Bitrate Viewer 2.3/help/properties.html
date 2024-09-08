@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-2">
+	<meta http-equiv="Content-Language" content="en">
+	<meta name="robots" content="index,follow">
+	<meta name="revisit-after" content="7 days">
+	<meta name="Content-Language" content="en">
+	<meta name="Language" content="English, en, english">
+	<meta name="description" content="Properties, settings and system requirement page of Bitrate Viewer, a next generation graphical histogram tool for Microsoft Windows for MPEG-1/MPEG-2 analysis">
+	<meta name="abstract" content="settings and system requirements of MPEG-1/MPEG-2 Bitrate Viewer histogram">
+	<meta name="keywords" content="Bitrate Viewer, properties, settings, system requirements, video, movie, analysis, quality, MPEG-2, MPEG-1, histogram, free software, Microsoft Windows">
+	<meta name="page-topic" content="Users Guide">
+	<meta name="page-type" content="Documentation">
+	<meta name="audience" content="all">
+	<meta name="author" content="K. Udo Gerber">
+	<meta name="publisher" content="K. Udo Gerber">
+	<meta name="copyright" content="(C) 2008,2009 EDV &amp; Astro Service">
+	<title>Bitrate Viewer - Properties</title>
+	<link rel="stylesheet" type="text/css" href="styles/BitrateViewer.css">
+</head>
+
+<body>
+	<h1><a name="top"></a>Bitrate Viewer - Documentation</h1>
+
+	<table align="left">
+		<tbody>
+		<tr class="linkpanel">
+			<td>
+				<div style="padding-left:82px;">
+				<a class="menubody" href="BitrateViewer.html">Home</a> |
+				<a class="menubody" href="features.html">Features</a> |
+				<a class="menubody" href="zoom_view.html">Zoom mode</a> |
+				<a class="menubody" href="properties.html">Properties</a> |
+				<a class="menubody" href="commands.html">Commands</a> |
+				<a class="menubody" href="problems.html">Problems</a> |
+				<a class="menubody" href="thanks.html">Thanks</a> |
+				<a class="menubody" href="http://community.wellness-portal24.biz/phpBB2/viewforum.php?f=18" target="_blank">Forum</a>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table><br>
+
+	<div class="clear">
+		<h2>Interface settings</h2>
+	</div>
+
+	<p>There are really only some parameters you can change within the
+		interface's work - but in some cases these may reflect a major
+		difference in the working performance of the tool.<br>
+		With standard settings a full video frame reader will be activated for
+		input file upto a size of 10MiB (+10% tolerance). The full read of
+		those files is assumed to be quick enough to get not registered by the
+		user for the time while the tool estimates the frame count of the input
+		file after opening it. If you feel that this primary read takes to much
+		time on your system or if your input source is a CD or DVD then you can
+		either deactivate using the full video frame reader or change the
+		threshold of the buffer size in percent upto the tool chooses full
+		reading of a file.</p>
+
+	<p><u><i>Hint</i></u>: The full video frame reader is always inactive when
+		working on VOB files!<br>
+		The internal threshold is automatically increased by 40% if the input
+		file is a transport stream. That's because TS has some more overhead of
+		MPEG headers. Generally you will see that the performance in analysis
+		of transport streams is remarkable worse than on elementary or program
+		streams. The reason is that two stacked demuxers will be used to get
+		the video data of a stream and that gives a lot of packet overhead.</p>
+
+	<h2>Online version check</h2>
+
+	<p>Since Bitrate Viewer Version 1.0.3 an automatic online version check is
+		done regularly. The default setting is an automatic check every three
+		weeks. You can change the time interval of automatic checks within the
+		<i>"Properties..."</i> sub-dialog. This dialog can be invoked e.g. by
+		pressing <i>Ctrl-O</i>. There you can also deactivate this feature if
+		you don't want having an internet connection activated by the tool.
+		When you have to pass a proxy/firewall to access the internet, please
+		specify the appropriate settings also in this sub-dialog. An optional
+		password to access a proxy server via an user account will be stored
+		within Windows registry as a DES-encrypted string.</p>
+
+	<p>If a new version of Bitrate Viewer is available you will be alerted by
+		a verbose version information window and you can access the online
+		changelog page with download links directly.</p>
+
+	<p>Even if you have the automatic online version check deactivated you can
+		manually perform a version check by pressing <i>Ctrl-U</i>.</p>
+
+	<h2>Minimum system requirements</h2>
+
+	<ul class="diamond">
+		<li>PC compatible with Intel Pentium 5 / 850 MHz and up or AMD equivalent</li>
+		<li>Windows 2000, Windows XP, Windows 2003 Server, Windows Vista, Windows 7</li>
+		<li>256 MB RAM, preferably more</li>
+		<li>12 MB free disk space and as much as you need for your movie files
+			to be analyzed</li>
+		<li>SVGA colour graphics adapter with 16k colours or more</li>
+	</ul>
+
+	<p><u><i>Remark</i></u>: This program is not suspected to run with Windows
+		9x/ME!</p>
+
+	<hr width="250" size="1" noshade align="left" color="#808080">
+
+	<table align="left">
+		<tbody>
+		<tr class="linkpanel">
+			<td>
+				<div align="left">
+				<a class="menubody" href="#top">top</a>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</body>
+</html>

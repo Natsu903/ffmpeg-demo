@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-2">
+	<meta http-equiv="Content-Language" content="en">
+	<meta name="robots" content="index,follow">
+	<meta name="revisit-after" content="7 days">
+	<meta name="Content-Language" content="en">
+	<meta name="Language" content="English, en, english">
+	<meta name="description" content="Features of Bitrate Viewer, a next generation graphical histogram tool for Microsoft Windows for MPEG-1/MPEG-2 analysis">
+	<meta name="abstract" content="features of MPEG-1/MPEG-2 Bitrate Viewer histogram drawer">
+	<meta name="keywords" content="Bitrate Viewer, video, movie, analysis, features, quality, MPEG-2, MPEG-1, histogram, free software, Microsoft Windows">
+	<meta name="page-topic" content="Users Guide">
+	<meta name="page-type" content="Documentation">
+	<meta name="audience" content="all">
+	<meta name="author" content="K. Udo Gerber">
+	<meta name="publisher" content="K. Udo Gerber">
+	<meta name="copyright" content="(C) 2008,2009 EDV &amp; Astro Service">
+	<title>Bitrate Viewer - Features</title>
+	<link rel="stylesheet" type="text/css" href="styles/BitrateViewer.css">
+</head>
+
+<body>
+	<h1><a name="top"></a>Bitrate Viewer - Documentation</h1>
+
+	<table align="left">
+		<tbody>
+		<tr class="linkpanel">
+			<td>
+				<div style="padding-left:82px;">
+				<a class="menubody" href="BitrateViewer.html">Home</a> |
+				<a class="menubody" href="features.html">Features</a> |
+				<a class="menubody" href="zoom_view.html">Zoom mode</a> |
+				<a class="menubody" href="properties.html">Properties</a> |
+				<a class="menubody" href="commands.html">Commands</a> |
+				<a class="menubody" href="problems.html">Problems</a> |
+				<a class="menubody" href="thanks.html">Thanks</a> |
+				<a class="menubody" href="http://community.wellness-portal24.biz/phpBB2/viewforum.php?f=18" target="_blank">Forum</a>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table><br>
+
+	<div class="clear">
+		<h2>Basics</h2>
+	</div>
+
+	<p>The bitrate of a video track is measured in bits per second which
+		is considered as the physical unit. In a metrical system we usually
+		supply exponential coefficients as prefixes to a value. With bitrate
+		values are normally growing above the first three ten based exponents,
+		so we have <i>k</i> for <i>kilo = 1,000</i> and <i>M</i> for <i>Mega
+		= 1,000,000</i> as multiplicands. Even higher values as you can find
+		in binary transfer speeds are prefixed with <i>G</i> for <i>Giga =
+		1,000,000,000</i>. We wouldn't have that kind of value for a video
+		track (not yet ;-) - but you can see one thing here: it is always a
+		multiplicand based on ten ... not on 2, 8 or 1,024 as for computer
+		memory devices. The reason for that maybe found in the fundamental
+		history of data processing. In the very beginning things like a byte
+		or a kilobyte were not existent while data transfer via serial lines
+		did exist already. So the unit for bitrates is metrical, not binary.
+	</p>
+
+	<p><b>Remark</b>: In the Bitrate Viewer tool that comes with DVD-Lab PRO
+		you can switch between metrical and binary display of the bitrate -
+		here with this tool you can't per author's decision!
+	</p>
+
+	<h2>Features</h2>
+
+	<div id="wrap-image-right">
+		<img src="images/BitrateViewer-SysMenu-Border.png" width="210" height="530">	</div>
+
+	<ul class="diamond">
+		<li><b>Main Menu</b>:<br>
+			The menu displayed right hand here is a blown up version of the
+			dialog's system menu. Click onto the top left corner of the
+			application's window frame to open it.</li>
+		<li><b>Drag &amp; Drop</b>:<br>
+			You can drag and drop selected files from Windows Explorer onto a
+			running Bitrate Viewer's dialog so that the tool stops any currently
+			analysis processing and tries to open your dropped file as the new
+			source.</li>
+		<li><b>Double Size Mode</b>:<br>
+			As of version 2.2 you can toggle/switch the main window's size twice
+			its standard size. Many have asked for it and thus it allows a more
+			detailed view within the bitrate grid. In version 2.2 it is still
+			experimental. You will have the final feature with version 3.0.</li>
+		<li><b>4 Calculation Algorithms</b>:<br>
+			You can dynamically choose between the following bitrate calculation
+			schemes:<br>
+			<ul class="circle">
+				<li><i>Second based (standard)</i>: the bitrate peak and average
+					values will be iterated after each second of consecutively
+					reading frames. Use <i>Ctrl-S</i> to activate from any other
+					setting.</li>
+				<li><i>GOP based</i>: a bitrate peak value is generated after
+					each GOP (<u>G</u>roup <u>o</u>f <u>P</u>ictures) processed.
+					A GOP usually consists of 12 ... 15 frames on PAL systems
+					and 15 ... 18 frames on NTSC systems. So the measurement
+					interval is approx. half a second. But files that are using
+					scene change detection or rudimentary cut-edited can have
+					shorter GOP's than the standard size specified to the MPEG
+					encoder. Consider having a GOP with only one I-frame then
+					you'll get very high bitrate values that increase the
+					average value and dominate the peak detection. Use
+					<i>Ctrl-G</i> to activate this from any other setting.</li>
+				<li><i>Enhanced GOP based</i>: This is a similar method as the
+					<i>GOP based</i> setting. The difference is a weighted
+					algorithm that counts the frames each GOP has and shifts a
+					GOP that is less than half the standard GOP size into the
+					next cycle of calculation. This gives a more harmonized
+					result than the raw <i>GOP based</i> method. Use
+					<i>Ctrl-X</i> to activate this from any other setting.</li>
+				<li><i>Single frame based</i>: Since version 2.0 this method
+					has been added to cover analysis and displaying of each
+					single frame in a video file. We can't name this a real
+					bitrate analysis method because no accumulation of bitrate
+					measurement values is done here. Beside the bitrate average
+					value which has to be the same of course as in the other
+					methods the bitrate values displayed are those of each
+					individual frame. Thus you will see extremely high values
+					usually for I-frame pictures and quite low values for
+					B-frame pictures. Use <i>Ctrl-F</i> to activate this method
+					from any other setting. If the FFMpeg interface delivers
+					the frame type information the frame type of the currently
+					pointed frame is shown right hand to the current time
+					display in the <b>Cursor</b> area. If the frame type is
+					shown you can click on the frame type indicator to jump
+					to the next or previous I-frame (see the
+					<a href="commands.html">commands</a> section for details).<br>
+					<u>Note</u>: Using the single frame based method has the
+					largest impact on system memory storage as all information
+					needed for each frame is cached in core memory!</li>
+			</ul>
+			Note that a video file has to be read again if you switch between
+			these settings ... unless you reach the same setting again for the
+			same file because of the ...</li>
+		<li><b>Bitrate Viewer Cache</b>:<br>
+			Each video file successfully processed will be cached internally,
+			i.e. the bitrate data only, not the video file itself. So if you
+			switch between the calculation algorithm settings (s.a.) you get
+			the next view redisplayed very fast after it has been processed
+			once.</li>
+		<li><b>Indicator LED</b>:<br>
+			When you open a file that is big enough to take at least some
+			seconds to process at all you'll see an indicating blinking LED
+			in the top left corner of the view window:<br>
+			<ul class="circle">
+				<li><img border="0" src="images/LED-Green-16x16.png" width="16" height="16" alt="green">&nbsp;
+					The file being processed most likely is an elementary video
+					stream that has GOP timecodes which were used at the beginning
+					and the end of the file to calculate the frame count based
+					on a fixed frame rate seen first in the file. This method of
+					frame count can be unreliable (see below).</li>
+				<li><img border="0" src="images/LED-Blue-16x16.png" width="16" height="16" alt="blue">&nbsp;
+					The file being processed has either PTS/DTS marks that were used
+					to read out and calculate the frame count based on a fixed frame
+					rate seen first in the file &nbsp; -or- &nbsp; the current file
+					is a VOB which contains so called NAV packs (navigational
+					directives) which were used to calculate the frame count also
+					based on a fixed frame rate.</li>
+				<li><img border="0" src="images/LED-Yellow-16x16.png" width="16" height="16" alt="yellow">&nbsp;
+					Neither PTS/DTS nor NAV packs were found in the open file.
+					Instead the SCR (system clock reference) values were found
+					in PES packets and alternativly used to calculate the frame
+					count.</li>
+				<li><img border="0" src="images/LED-Red-16x16.png" width="16" height="16" alt="red">&nbsp;
+					In this case the extended interface was not able to find
+					either of those information markers mentioned. So there
+					is a frame count prediction based on the file's size which
+					is indeed not very accurate.</li>
+				<li><img border="0" src="images/LED-Orange-16x16.png" width="16" height="16" alt="red">&nbsp;
+					New as of version 2.0 this LED indicates a cross check frame
+					count estimation error in case when the
+					<img border="0" src="images/LED-Green-16x16.png" width="16" height="16" alt="green">
+					LED was previously shown while scanning the file, i.e. GOP
+					timecode only is present in your file. A cross check is done
+					regularly to see if the estimated frame count matches the
+					amount of data read compared to its file size. If there is
+					a mismatch then you obviously have a file that was cut
+					improperly and therefore has corrupted timecode stamps.</li>
+			</ul>
+			After the file has been processed the LED will either remain steady
+			for a moment saying that the frame count prediction was fine or it
+			turns into steady red with an additional text that displays the
+			deviation in percent and absolute value.</li>
+		<li><b>Timecode status</b>:<br>
+			The status of the indicator LED mentioned above will be displayed
+			permanent below the MPEG layer and stream type on the left with an
+			abbreviated note. You'll see either <b><i>PTS</i></b> or <b><i>NAV</i></b> for the
+			<img border="0" src="images/LED-Blue-16x16.png" width="16" height="16" alt="blue">
+			LED, <b><i>GOP</i></b> for the
+			<img border="0" src="images/LED-Green-16x16.png" width="16" height="16" alt="green">
+			LED, <b><i>SCR</i></b> for the
+			<img border="0" src="images/LED-Yellow-16x16.png" width="16" height="16" alt="yellow">
+			LED. Additionally the string <b><i>full</i></b> tells you that the full
+			video frame reader was used which automatically activates
+			itself for files smaller than 11MB of size (you can deactivate this
+			feature).<br>
+			If none of the conditions above do match the text <b><i>n/a</i></b>
+			will be displayed, i.e. when the scondary MPEG interface could not
+			be used. This will be the case for all files that don't meet MPEG1
+			or MPEG2 conditions.</li>
+		<li><b>CRC status display</b>:<br>
+			For MPEG 2 PS and TS a CRC check is performed according to Annex A
+			of the ISO/IEC MPEG specification during file header analysis. If a
+			CRC error is detected you will have an additional status display on
+			the left hand pane. Detection of CRC errors don't have any influence
+			on the bitrate analysis itself - despite it can be that frame read
+			errors may occur.</li>
+		<li><b>Program/PID display</b>:<br>
+			MPEG 2 TS files can have multiple video and audio streams. Normally
+			the first unscrambled/non-encrypted video stream will be selected by
+			the interface to analyze. You will see an additional information
+			display with the TS selected program number and PID. MPEG 4 TS and
+			M2TS files can have multiple video and audio stream as well but the
+			integrated interface doesn't make a check on it.</li>
+		<li><b>Marker lines</b>:<br>
+			Two horizontal lines in the viewer window are predefined and always
+			visible: A red maximum bitrate marker that normally shows up on
+			10,000kpbs to remind to the DVD spec's maximum and a black line
+			in the middle of the view.<br>
+			When a file is analyzed an displayed you will also see two tick
+			marks on the bottom: A red one that shows the position of the
+			maximum bitrate found and a black one for the position of the
+			minimum bitrate.<br>
+			You can also switch between three different horizontal markers:<br>
+			<ul class="circle">
+				<li><i class="green">green</i>: Activate this one by pressing
+					<i>Ctrl-LeftClick</i> to show the average bitrate value.</li>
+				<li><i class="brown">brown</i>: This marker shows the value of
+					the maximum bitrate. Activate it by <i>Shift-LeftClick</i>.</li>
+				<li><i class="blue">blue</i>: Switch this one on with
+					<i>Alt-LeftClick</i>. It shows the minimum bitrate
+					value.</li>
+			</ul>
+			By pressing all three modifiers together while clicking you'll
+			switch all three markers on and off.</li>
+		<li><b>Cursor movement</b>:<br>
+			When you move the mouse pointer over the viewer window a black
+			vertical line will be displayed as a cursor that tracks your mouse
+			movement within the histogram. Sometimes you may find that
+			bothering ... so a <i>Alt-RightClick</i> with the mouse will hide the
+			cursor or make it re-appear. To mark an interesting position as
+			permanent in the histogram use <i>Ctrl-RightClick</i> to freeze
+			the cursor at its current position. Press again to unlock the
+			cursor. Since version 2.1 you can approximately move the cursor one
+			second or minute left or right from its current position. Use
+			<i>LeftClick</i> or <i>RightClick</i> on the right hand current time
+			display to step a second and <i>Ctrl-LeftClick</i> or
+			<i>Ctrl-RightClick</i> to step a minute away. Exactness of movement
+			depends on the current scale/zoom of the view and the TV system of
+			the file. You can easier step an exact second in a PAL file than on
+			NTSC.</li>
+		<li><b>Scaling</b>:<br>
+			The standard display scale can show a maximum of something more
+			than 10,000kbps. You may have DV files which much more than that
+			or MPEG4 files that have much less than even 2,000kbps. To scale
+			such a file properly use a <i>LeftDoubleClick</i> in the viewer
+			window and it will be done so. If auto-scaling is active you will
+			notice as of version 2.1 also the preview window will adapt to the
+			current needed scale while reading a file.</li>
+		<li><b>GOP information</b>:<br>
+			During frame count estimation the first GOP (Group of Pictures)
+			and the last GOP of a file is read if found and analyzed.
+			On MPEG files a re-ordering of B-frames will occur to get the
+			correct playback sequence of all frames. Frame re-ordering and
+			the position of the individual frame PTS are important facts to
+			calculate an accurate frame count. You can display the status of
+			these two GOP's by moving the mouse pointer onto the top left
+			corner of the viewer window. The status displayed will show both
+			GOP's if available and their associated flags (open GOP by 'o',
+			closed GOP by 'c' and a 'b' beneath for a broken link or a dash
+			in the normal case when the link is not broken). The frame letters
+			('I', 'P' or 'B') shown are in raw decoding order of the file
+			being analyzed. Never found but also detected are D-frames. If you
+			see a '0' in the frame string then the frame header did not
+			specify a frame type. A '?' in this list is the result of a crashed
+			frame header. Frames with a value of '0' or '?' will not be counted
+			as proper frames.<br>
+			You can copy this text displayed to the clipboard if needed. Just
+			press the <i>RightClick</i> within the text subwindow and select
+			the clipboard function from context menu.<br>
+			For more information about frame headers and frame re-ordering
+			please refer to the ISO/IEC MPEG specification.</li>
+		<li><b>Multiple instances</b>:<br>
+			The tool is a simple Windows dialog ... but if you are really
+			frightened to switch between many files and have to read and
+			analyze them all the time - you don't need that. Notice that a
+			small tray icon is installed after starting the tool. In its
+			context menu you can &raquo;Duplicate current instance&laquo;
+			as often as you need it. Some handling for multiple instances
+			you will find in this context menu - just <i>RightClick</i>
+			it.</li>
+		<li><b>Gradient color display</b>:<br>
+			With the standard setting the viewer window will show the bitrate
+			sample values in gradient colors and the caption headers right beneath
+			the viewer window are painted in gradient colors as well. By pressing
+			<i>Shift-RightClick</i> or <i>Ctrl-C</i> you can change the display
+			type into fixed colors for the viewer window and with <i>Ctrl-D</i>
+			for the caption headers. These commands are toggle switches.</li>
+		<li><b><a href="zoom_view.html">Multi-zoom mode</a></b>:<br>
+			Since version 2.0 you can zoom a marked area within the viewer window
+			several times downto a single sample depth view. Mark a zoomable area
+			within any calculation method by <i>LeftClick</i>ing and dragging and
+			activate to zoom to this area by a <i>RightClick</i> into the marked
+			area. The zoom feature is a very powerful instrument, so you find more
+			detailed information <a href="zoom_view.html">here</a>.</li>
+	</ul>
+
+	<h2>File load progress bar</h2>
+
+	<div id="wrap-image-right">
+		<img src="images/BitrateViewer-BadFramePreview.png" width="573" height="302">
+	</div>
+
+	<p>From version 2.0 onwards you'll see a load progress bar at the bottom of
+		the viewer window. So especially in cases like those of which you see the
+		screenshot on the right side where the pre-load frame count estimated
+		doesn't match the file size in progress. The percent value shown on the
+		window bar is based on the frames read vs. frame count estimated and the
+		progress status bar on the bottom is based on percentage of the file size
+		already read vs. total file size. The example here is taken from a demuxed
+		VOB file that has only GOP timecode because it's an elementary stream now
+		... and the original file was cut-edited with a raw MPEG editor, so the
+		timecode stamps in the file are not correct which leads to a wrong frame
+		count estimation. The last GOP timecode is of about 12 minutes and the real
+		frame count makes up only 3 minutes.<br>
+		Experimentally as of version 2.0 a cross check of the estimated frame count
+		(for GOP timecode analyzed files) against the file size and current file
+		position read is done which should avoid the shown effect of this screenshot.
+		Therefore the preview of a file loaded should be more in sync to the final
+		view when the file is fully analyzed. A feedback to this behaviour is kindly
+		appreciated and requested.
+	</p>
+
+	<hr width="250" size="1" noshade align="left" color="#808080">
+
+	<table align="left">
+		<tbody>
+		<tr class="linkpanel">
+			<td>
+				<div align="left">
+				<a class="menubody" href="#top">top</a>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</body>
+</html>

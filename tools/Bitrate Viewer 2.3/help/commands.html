@@ -1,0 +1,497 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-2">
+	<meta http-equiv="Content-Language" content="en">
+	<meta name="robots" content="index,follow">
+	<meta name="revisit-after" content="7 days">
+	<meta name="Content-Language" content="en">
+	<meta name="Language" content="English, en, english">
+	<meta name="description" content="Command reference for the Bitrate Viewer, a next generation graphical histogram tool for Microsoft Windows for MPEG-1/MPEG-2 analysis">
+	<meta name="abstract" content="command summary for MPEG-1/MPEG-2 Bitrate Viewer histogram drawer">
+	<meta name="keywords" content="Bitrate Viewer, commands, video, movie, analysis, features, quality, MPEG-2, MPEG-1, histogram, free software, Microsoft Windows">
+	<meta name="page-topic" content="Users Guide">
+	<meta name="page-type" content="Documentation">
+	<meta name="audience" content="all">
+	<meta name="author" content="K. Udo Gerber">
+	<meta name="publisher" content="K. Udo Gerber">
+	<meta name="copyright" content="(C) 2009 EDV &amp; Astro Service">
+	<title>Bitrate Viewer - Command reference</title>
+	<link rel="stylesheet" type="text/css" href="styles/BitrateViewer.css">
+</head>
+
+<body>
+	<h1><a name="top"></a>Bitrate Viewer - Documentation</h1>
+
+	<table align="left">
+		<tbody>
+		<tr class="linkpanel">
+			<td>
+				<div style="padding-left:82px;">
+				<a class="menubody" href="BitrateViewer.html">Home</a> |
+				<a class="menubody" href="features.html">Features</a> |
+				<a class="menubody" href="zoom_view.html">Zoom mode</a> |
+				<a class="menubody" href="properties.html">Properties</a> |
+				<a class="menubody" href="commands.html">Commands</a> |
+				<a class="menubody" href="problems.html">Problems</a> |
+				<a class="menubody" href="thanks.html">Thanks</a> |
+				<a class="menubody" href="http://community.wellness-portal24.biz/phpBB2/viewforum.php?f=18" target="_blank">Forum</a>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table><br>
+
+	<div class="clear">
+		<h2>Command reference</h2>
+	</div>
+
+	<p>In the meantime there are lots of GUI commands for Bitrate Viewer that
+		can be executed with keyboard and or mouse actions. They are more or
+		less covered within all web pages. Here is a complete overview that may
+		help you as a handy shortcut for your desktop:</p>
+
+	<h3>Mouse driven activities:<br>
+		&nbsp;</h3>
+
+	<table width="990" style="background-color:white;">
+		<tbody>
+		<tr class="tableheader">
+			<td width="155" align="center" style="white-space:nowrap;">Keyboard modifiers</td>
+			<td width="165" align="center" style="white-space:nowrap;">Mouse action</td>
+			<td width="420">Functionality</td>
+			<td width="250">Requirements</td>
+		</tr>
+		<tr class="tableheader">
+			<td colspan="4" align="center">Activities inside the viewer window</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">Drag &amp; Drop</td>
+			<td valign="top">Drop the selected file to open it instantly</td>
+			<td valign="top">Drag a video file from Windows Explorer over the viewer window</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Shift</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Toggle usage of gradient colors for view and caption bars</td>
+			<td valign="top">- none -</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">MouseMove</td>
+			<td valign="top">Display small tick marks at every 5% of the view's width</td>
+			<td valign="top">Position at the top of the view with an analyzed file</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">MouseMove</td>
+			<td valign="top">Track the current bitrate sample position</td>
+			<td valign="top">Analyzed file displayed in the view</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">LeftDoubleClick</td>
+			<td valign="top">Toggle auto-scaling of the viewer window</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Toggle average bitrate value marker line</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Shift</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Toggle maximum bitrate value marker line</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Alt</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Toggle minimum bitrate value marker line</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl+Alt+Shift</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Toggle all three bitrate value marker lines</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Toggle tracking of the mouse position in the view</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Alt</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Toggle display of the mouse cursor tracking line</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="tableheader">
+			<td colspan="4" height="6"></td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl+Alt+Shift</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Enter zoom at 1 sample/display unit at current position</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">LeftBtnDown &amp; Drag</td>
+			<td valign="top">Set a zoomable area for parts of the view</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Enter zoomed view for the marked area</td>
+			<td valign="top">Mouse position is within marked zoomable area</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Cancel and erase marked zoomable area</td>
+			<td valign="top">Any position, zoomable area is shown on screen</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl</td>
+			<td valign="top" align="center">RightBtnDown &amp; Drag</td>
+			<td valign="top">Point into the zoomable area and move it left or right</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Shift</td>
+			<td valign="top" align="center">RightBtnDown &amp; Drag</td>
+			<td valign="top">Resize the zoomable area to any new size</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none - </td>
+			<td valign="top" align="center">LeftBtnDown &amp; Drag</td>
+			<td valign="top">Extended zoom increasing the zoom scale</td>
+			<td valign="top">Display is already in zoomable state</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Alt+Shift</td>
+			<td valign="top" align="center">RightBtnDown</td>
+			<td valign="top">Zoom out (-200%) at current position, decrease scale</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl+Shift</td>
+			<td valign="top" align="center">RightBtnDown</td>
+			<td valign="top">Zoom in (+50%) at current position, increase scale</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Alt+Shift</td>
+			<td valign="top" align="center">LeftBtnDown</td>
+			<td valign="top">Start continous automatic zoom-out, decrease scale</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">WheelPushUp</td>
+			<td valign="top">Zoom out from the display like with continous auto-zoom</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl+Shift</td>
+			<td valign="top" align="center">LeftBtnDown</td>
+			<td valign="top">Start continous automatic zoom-in, increase scale</td>
+			<td valign="top">Standard display view or any zoomable view</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">WheelPullDown</td>
+			<td valign="top">Zoom into the display like with continous auto-zoom</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="tableheader">
+			<td colspan="4" height="6"></td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">MouseMove</td>
+			<td valign="top">Display status window for first/last GOP's</td>
+			<td valign="top">Current mouse position is on the left top sensitive area</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">MouseMove</td>
+			<td valign="top">Display status window for frame estimation and time elapsed</td>
+			<td valign="top">Current mouse position is on the right top sensitive area</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Open context menu</td>
+			<td valign="top">Status text window is shown on screen</td>
+		</tr>
+		<tr class="tableheader">
+			<td colspan="4" align="center">Activities outside the viewer window</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Exit from zoom mode, display standard view</td>
+			<td valign="top">Click on zoom flag while zoomed view is active</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Toggle zoom flag shown as verbose/non-verbose</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="tableheader">
+			<td colspan="4" height="6"></td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Move viewport of the zoomed view left or right</td>
+			<td valign="top">Click is in zoom indicator beneath the bulls-eye while display is in zoomed state</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl</td>
+			<td valign="top" align="center">LeftBtnDown &amp; Drag</td>
+			<td valign="top">Move viewport of the zoomed view at any place horizontally along the view</td>
+			<td valign="top">Button down is at any position on the zoom indicator during zoomed state</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">LeftDoubleClick</td>
+			<td valign="top">Exit from zoom mode, display standard view</td>
+			<td valign="top">Click is on the zoom indicator's bulls-eye during zoomed state</td>
+		</tr>
+		<tr class="tableheader">
+			<td colspan="4" height="6"></td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Switch to seconds based bitrate calculation mode</td>
+			<td valign="top">Click on the calculation method indicator with a valid file loaded and displayed on screen</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Switch to single frame based bitrate calculation mode</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Switch to enhanced GOP bitrate calculation mode</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Switch to standard GOP based bitrate calculation mode</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Alt</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Select next bitrate calculation mode (rotate CW: S, G, X, F)</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Alt</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Select previous bitrate calculation mode (rotate CCW: F, X, G, S)</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="tableheader">
+			<td colspan="4" height="6"></td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Locate previous I-frame and position the cursor on it</td>
+			<td valign="top">In frame analysis method click on the frame type indicator
+				(I, P, B) with a valid file loaded and displayed on screen</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Locate next I-frame and position the cursor on it</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Locate previous I-frame and center the view and place cursor on it</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Locate next I-frame and center the view and place cursor on it</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="tableheader">
+			<td colspan="4" height="6"></td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Move the cursor one second back from its current position</td>
+			<td valign="top">Click on the right hand panel's current time display with a file loaded</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Advance the cursor one second from its current position</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Move the cursor one minute back from its current position</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Advance the cursor one minute from its current position</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		<tr class="tableheader">
+			<td colspan="4" height="6"></td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">LeftClick</td>
+			<td valign="top">Stop toggling stream count and program/PID status for standard view </td>
+			<td valign="top">Click on the left hand panel's stream count or program/PID status with a MPEG 2 TS file loaded</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">- none -</td>
+			<td valign="top" align="center">RightClick</td>
+			<td valign="top">Restart toggling stream count and program/PID status for standard view</td>
+			<td valign="top">s.a.</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h3>Keyboard driven activities:<br>
+		&nbsp;</h3>
+
+	<table width="700" style="background-color:white;">
+		<tbody>
+		<tr class="tableheader">
+			<td width="145" align="center" style="white-space:nowrap;">Keyboard shortcut</td>
+			<td width="555">Functionality</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-C</td>
+			<td valign="top">Toggle usage of gradient colors for view and caption bars</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-A</td>
+			<td valign="top">Toggle auto-scaling of the viewer window</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-Z</td>
+			<td valign="top">Toggle zoom flag shown as verbose/non-verbose</td>
+		</tr>
+		<tr class="tableheader">
+			<td colspan="2" height="6"></td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">C</td>
+			<td valign="top">Close and exit the application</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">L</td>
+			<td valign="top">Open file selection dialog to load a file</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">P</td>
+			<td valign="top">Pause calculation/analysis of file during read</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">S</td>
+			<td valign="top">Stop currently running read and analysis operation</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">F1</td>
+			<td valign="top">Open HTML help page (offline) in external browser</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Alt-D</td>
+			<td valign="top">Switch/toggle between double size mode and standard view</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Alt-A</td>
+			<td valign="top">Show about box, credits, etc.</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">F5</td>
+			<td valign="top">Recalculate current file, read from cache if data valid</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-F5</td>
+			<td valign="top">Force recalculation of current file from disk data</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-S</td>
+			<td valign="top">Select second based bitrate calculation method</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-G</td>
+			<td valign="top">Select standard GOP based bitrate calculation method</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-X</td>
+			<td valign="top">Select enhanced GOP based bitrate calculation method</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-F</td>
+			<td valign="top">Select single frame based bitrate calculation method</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-D</td>
+			<td valign="top">Toggle drawing of plain or elliptic caption headers</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-I</td>
+			<td valign="top">Open interface settings dialog</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-O</td>
+			<td valign="top">Open properties dialog</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-U</td>
+			<td valign="top">Force a manual online version check now</td>
+		</tr>
+		<tr class="downloadtable">
+			<td valign="top" align="center">Ctrl-T</td>
+			<td valign="top">Toggle display of dynamic tooltips (enable/disable)</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<hr width="250" size="1" noshade align="left" color="#808080">
+
+	<table align="left">
+		<tbody>
+		<tr class="linkpanel">
+			<td>
+				<div align="left">
+				<a class="menubody" href="#top">top</a>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</body>
+</html>
