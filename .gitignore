@@ -55,3 +55,6 @@
 /src/115gop_nalu_sps_pps_encode/115gop_n.1c2191a6
 /src/115gop_nalu_sps_pps_encode/x64
 /src/115gop_nalu_sps_pps_encode/400_300_25_preset.h264
+/src/116test_xencode/116test_xencode
+/src/116test_xencode/x64
+/src/116test_xencode/.vs
