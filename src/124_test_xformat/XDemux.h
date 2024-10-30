@@ -19,5 +19,7 @@ public:
 	 * \return 是否成功
 	 */
 	bool Read(AVPacket* pkt);
+
+	bool Seek(long long pts,int stream_index);
 };
 

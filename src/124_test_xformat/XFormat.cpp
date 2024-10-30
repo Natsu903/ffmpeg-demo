@@ -64,3 +64,18 @@ void XFormat::set_c(AVFormatContext* c)
 		}
 	}
 }
+
+bool XFormat::RescaleTime(AVPacket* pkt, long long offset_pts, XRational time_base)
+{
+	unique_lock<mutex> mux_;
+	if (!c_) return false;
+	auto out_stream = c_->streams[pkt->stream_index];
+	AVRational in_time_base;
+	in_time_base.num = time_base.num;
+	in_time_base.den = time_base.den;
+	pkt->pts = av_rescale_q_rnd(pkt->pts - offset_pts, in_time_base, out_stream->time_base, (AVRounding)(AV_ROUND_NEAR_INF | AV_ROUND_PASS_MINMAX));
+	pkt->dts = av_rescale_q_rnd(pkt->dts - offset_pts, in_time_base, out_stream->time_base, (AVRounding)(AV_ROUND_NEAR_INF | AV_ROUND_PASS_MINMAX));
+	pkt->duration = av_rescale_q(pkt->duration, in_time_base, out_stream->time_base);
+	pkt->pos = -1;
+	return true;
+}

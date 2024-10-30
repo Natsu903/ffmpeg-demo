@@ -37,6 +37,8 @@ public:
 	int video_index() { return video_index_; }
 	XRational video_time_base() { return video_time_base_; }
 	XRational audio_time_base() { return audio_time_base_; }
+	//根据timebase换算时间
+	bool RescaleTime(AVPacket* pkt,long long offset_pts, XRational time_base);
 
 protected:
 	AVFormatContext* c_=nullptr;//封装解封装上下文
