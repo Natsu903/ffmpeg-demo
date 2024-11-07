@@ -119,3 +119,7 @@
 /src/129_rtsp_remux_chain/x64
 /src/129_rtsp_remux_chain/rtsp_out1.mp4
 /src/129_rtsp_remux_chain/rtsp_out2.mp4
+/src/test_xcodec_lib/x64
+/src/xcodec/x64
+/src/xcodec/xcodec
+/src/xcodec/.vs
